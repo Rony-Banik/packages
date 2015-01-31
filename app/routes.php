@@ -123,7 +123,15 @@ Route::get("test", function(){
 
 	$test = (string)$user->roles;
 
-	 echo $test;
+	echo $test."<br>";
+
+	$user_roles = User::has('roles')->get();
+	
+
+	echo "<pre>";
+	var_dump($user_roles);
+
+	 
 
 
 
